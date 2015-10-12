@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="movieLibraryModelStoreContainer" CdmEntityContainer="movieLibraryEntities">
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="movieLibraryModel.Movy">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="ImdbLink" ColumnName="ImdbLink" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="viewed" ColumnName="viewed" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,13 @@
+﻿@model movieSite.Models.MoviesModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Movie library";
+}
+
+<h2>Movies</h2>
+
+@foreach (var movie in Model.MoviesList)
+{
+    @movie.Title
+    <br />
+}

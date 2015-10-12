@@ -1,0 +1,10 @@
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\DATA.dll.config
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\DATA.dll
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\DATA.pdb
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\EntityFramework.dll
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\EntityFramework.xml
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\obj\Debug\DATA.dll
+c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\obj\Debug\DATA.pdb
