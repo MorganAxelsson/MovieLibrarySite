@@ -1,5 +1,5 @@
 ﻿@model movieSite.Models.MoviesModel
-@using (Html.BeginForm("Add", "Movie", FormMethod.Post))
+@using (Html.BeginForm("Edit", "Movie", FormMethod.Post))
 {
     <div class="row">
         <div class="col-md-12">
@@ -39,9 +39,9 @@
             @Html.TextBoxFor(x => x.Viewed)
         </div>
 
-
         <div class="col-md-12">
-            <input type="submit" value="Add Movie"/>
+            <input type="submit" value="Add Movie" />
         </div>
     </div>
 }
+

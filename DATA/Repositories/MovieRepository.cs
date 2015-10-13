@@ -19,6 +19,15 @@ namespace DATA.Repositories
             }
             return movieslist;
         }
+        public static Movy getSpecificMovie(int id) 
+        {
+            using (var database = new movieLibraryEntities())
+            {
+                var movie = database.Movies.Where(x => x.Id == id).FirstOrDefault();
+                return movie;
+            }
+          
+        }
         public static void AddMovie(Movy movie)
         {
             using (var database = new movieLibraryEntities())

@@ -18,8 +18,22 @@ namespace movieSite.Controllers
         public ActionResult Add()
         {
             var model = new MoviesModel();
-            model.GenreList = GetGenre();
+            model.GenreList = GetGenreList();
             model.Viewed = DateTime.Now.Date;
+            return View(model);
+        }
+        [HttpGet]
+        public ActionResult edit(int id)
+        {
+            var model = new MoviesModel();
+            var movie = MovieRepository.getSpecificMovie(id);
+            model.Description = movie.description;
+            model.Title = movie.Title;
+            model.ImdbLink = movie.ImdbLink;
+            model.Director = movie.Director;
+            if(movie.viewed != null) model.Viewed = (DateTime)movie.viewed;
+            model.MovieID = movie.Id;
+            model.GenreList = GetGenreList();
             return View(model);
         }
         #endregion
@@ -27,6 +41,13 @@ namespace movieSite.Controllers
         [HttpPost]
         public ActionResult Add(MoviesModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                var movieModel = new MoviesModel();
+                movieModel.GenreList = GetGenreList();
+                movieModel.Viewed = DateTime.Now.Date;
+                return View(movieModel);
+            }
             var movie = new Movy();
             movie.Title = model.Title;
             movie.ImdbLink = model.ImdbLink;
@@ -37,10 +58,23 @@ namespace movieSite.Controllers
             MovieRepository.AddMovie(movie);
             return RedirectToAction("Index","Home");
         }
+        [HttpPost]
+        public ActionResult Edit(MoviesModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var movieModel = new MoviesModel();
+                movieModel.GenreList = GetGenreList();
+                movieModel.Viewed = model.Viewed;
+                return View(movieModel);
+                return View(model);
+            }
+            return RedirectToAction("Index", "Home");
+        }
         #endregion
         #endregion
-
-        private List<SelectListItem> GetGenre()
+        #region private methods
+        private List<SelectListItem> GetGenreList()
         {
             var genreList = new List<SelectListItem>();
             var data = new[]{
@@ -58,5 +92,6 @@ namespace movieSite.Controllers
             genreList = data.ToList();
             return genreList;
         }
+        #endregion
     }
 }

@@ -124,6 +124,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Movie\Add.cshtml" />
     <Content Include="Views\Shared\MovieForm.cshtml" />
+    <Content Include="Views\Movie\edit.cshtml" />
+    <Content Include="Views\Shared\EditForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -9,7 +9,7 @@
 <ul>
 @foreach (var movie in Model.MoviesList)
 {
-    <li> @movie.Title</li>
+    <li><a href="@Url.Action("Edit", "Movie", new { id = @movie.Id}) ">@movie.Title</a></li>
 
 }
 </ul>
