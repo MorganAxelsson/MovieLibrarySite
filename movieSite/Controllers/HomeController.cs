@@ -9,6 +9,7 @@ namespace movieSite.Controllers
 {
     public class HomeController : Controller
     {
+        #region actionResult
         // GET: Home
         public ActionResult Index()
         {
@@ -16,5 +17,6 @@ namespace movieSite.Controllers
             model.MoviesList = MovieRepository.GetMovies();
             return View(model);
         }
+        #endregion
     }
 }

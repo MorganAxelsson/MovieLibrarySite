@@ -19,6 +19,14 @@ namespace DATA.Repositories
             }
             return movieslist;
         }
+        public static void AddMovie(Movy movie)
+        {
+            using (var database = new movieLibraryEntities())
+            {
+                database.Movies.Add(movie);
+                database.SaveChanges();
+            }
+        }
         #endregion
 
     }

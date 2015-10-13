@@ -8,3 +8,13 @@ c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\En
 c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\obj\Debug\DATA.dll
 c:\users\lodiz\documents\visual studio 2013\Projects\movieSite\DATA\obj\Debug\DATA.pdb
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\obj\Debug\DATA.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\DATA.dll.config
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\DATA.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\DATA.pdb
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.xml
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\obj\Debug\DATA.pdb

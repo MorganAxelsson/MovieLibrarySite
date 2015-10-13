@@ -1,0 +1,47 @@
+﻿@model movieSite.Models.MoviesModel
+@using (Html.BeginForm("Add", "Movie", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.Title)
+        </div>
+        <div class="col-md-12">
+            @Html.TextBoxFor(x => x.Title)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.Genre)
+        </div>
+        <div class="col-md-12">
+            @Html.DropDownListFor(x => x.Genre, Model.GenreList)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.ImdbLink)
+        </div>
+        <div class="col-md-12">
+            @Html.TextBoxFor(x => x.ImdbLink)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.Director)
+        </div>
+        <div class="col-md-12">
+            @Html.TextBoxFor(x => x.Director)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.Description)
+        </div>
+        <div class="col-md-12">
+            @Html.TextAreaFor(x => x.Description)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(x => x.Viewed)
+        </div>
+        <div class="col-md-12">
+            @Html.TextBoxFor(x => x.Viewed)
+        </div>
+
+
+        <div class="col-md-12">
+            <input type="submit" value="Add Movie"/>
+        </div>
+    </div>
+}
