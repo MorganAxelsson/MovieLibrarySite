@@ -26,7 +26,7 @@ namespace movieSite.Controllers
         public ActionResult edit(int id)
         {
             var model = new MoviesModel();
-            var movie = MovieRepository.getSpecificMovie(id);
+            var movie = MovieRepository.GetSpecificMovie(id);
             model.Description = movie.description;
             model.Title = movie.Title;
             model.ImdbLink = movie.ImdbLink;
@@ -35,6 +35,11 @@ namespace movieSite.Controllers
             model.MovieID = movie.Id;
             model.GenreList = GetGenreList();
             return View(model);
+        }
+        public ActionResult Remove(int id)
+        {
+            MovieRepository.RemoveMovie(id);
+            return RedirectToAction("Index", "Home");
         }
         #endregion
         #region post
@@ -59,16 +64,25 @@ namespace movieSite.Controllers
             return RedirectToAction("Index","Home");
         }
         [HttpPost]
-        public ActionResult Edit(MoviesModel model)
+        public ActionResult Edit(MoviesModel model, int Id)
         {
             if (!ModelState.IsValid)
             {
                 var movieModel = new MoviesModel();
                 movieModel.GenreList = GetGenreList();
                 movieModel.Viewed = model.Viewed;
+                movieModel.MovieID = Id;
                 return View(movieModel);
-                return View(model);
             }
+
+            var movie = new Movy();
+            movie.Title = model.Title;
+            movie.ImdbLink = model.ImdbLink;
+            movie.description = model.Description;
+            movie.Director = model.Director;
+            movie.Genre = model.Genre;
+            movie.viewed = model.Viewed;
+            MovieRepository.UpdateMovie(movie, Id);
             return RedirectToAction("Index", "Home");
         }
         #endregion

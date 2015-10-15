@@ -19,7 +19,7 @@ namespace DATA.Repositories
             }
             return movieslist;
         }
-        public static Movy getSpecificMovie(int id) 
+        public static Movy GetSpecificMovie(int id) 
         {
             using (var database = new movieLibraryEntities())
             {
@@ -33,6 +33,31 @@ namespace DATA.Repositories
             using (var database = new movieLibraryEntities())
             {
                 database.Movies.Add(movie);
+                database.SaveChanges();
+            }
+        }
+        public static void UpdateMovie(Movy movie,int id)
+        {
+            using (var database = new movieLibraryEntities())
+            {
+                var movieToUpdate = database.Movies.Where(x => x.Id == id).FirstOrDefault();
+                if (movieToUpdate != null) { 
+                movieToUpdate.Title = movie.Title;
+                movieToUpdate.description = movie.description;
+                movieToUpdate.Director = movie.Director;
+                movieToUpdate.ImdbLink = movie.ImdbLink;
+                movieToUpdate.viewed = movie.viewed;
+                
+                database.SaveChanges();
+                }
+            }
+        }
+        public static void RemoveMovie(int id)
+        {
+            using (var database = new movieLibraryEntities())
+            {
+                var movie = database.Movies.Where(x => x.Id == id).FirstOrDefault();
+                database.Movies.Remove(movie);
                 database.SaveChanges();
             }
         }

@@ -1,5 +1,5 @@
 ﻿@model movieSite.Models.MoviesModel
-@using (Html.BeginForm("Edit", "Movie", FormMethod.Post))
+@using (Html.BeginForm("Edit", "Movie", new { Id = @Model.MovieID },FormMethod.Post))
 {
     <div class="row">
         <div class="col-md-12">
@@ -40,7 +40,8 @@
         </div>
 
         <div class="col-md-12">
-            <input type="submit" value="Add Movie" />
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a class="btn btn-danger" href="@Url.Action("Remove","Movie",new {id=@Model.MovieID})">Ta bort<span class="glyphicon glyphicon-remove"></span></a>
         </div>
     </div>
 }

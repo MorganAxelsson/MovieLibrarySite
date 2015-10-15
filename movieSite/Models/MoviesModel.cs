@@ -17,20 +17,13 @@ namespace movieSite.Models
         public string Title { get; set; }
 
         [Required(ErrorMessage = "fill in genre")]  
-        public string Genre { get; set; }
-
-        [Required(ErrorMessage = "fill in director")] 
-        public string Director { get; set; }
-
-        [Required(ErrorMessage = "fill in description")] 
-        public string Description { get; set; }
-
-        [Required(ErrorMessage = "fill in imdb link")]   
+        public string Genre { get; set; }        
+        public string Director { get; set; }        
+        public string Description { get; set; }       
         public string ImdbLink { get; set; }
 
         [Required(ErrorMessage = "fill in date")] 
         public DateTime Viewed { get; set; }
-
         public List<Movy> MoviesList { get; set; }
         public List<SelectListItem> GenreList { get; set; }
         #endregion

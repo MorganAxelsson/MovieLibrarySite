@@ -4,12 +4,12 @@
     ViewBag.Title = "Movie library";
 }
 
-<h2>Movies i've seen</h2>
+<h2>Movies i have watched</h2>
 
 <ul>
 @foreach (var movie in Model.MoviesList)
 {
     <li><a href="@Url.Action("Edit", "Movie", new { id = @movie.Id}) ">@movie.Title</a></li>
-
+   
 }
 </ul>
