@@ -46,3 +46,7 @@ C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrar
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\obj\Debug\movieSite.csprojResolveAssemblyReference.cache
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\obj\Debug\movieSite.dll
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\obj\Debug\movieSite.pdb
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\bin\PagedList.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\bin\PagedList.Mvc.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\bin\PagedList.xml
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\movieSite\bin\PagedList.Mvc.xml

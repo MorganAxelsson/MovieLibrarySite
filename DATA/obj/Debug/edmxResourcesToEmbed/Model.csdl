@@ -14,5 +14,6 @@
     <Property Name="viewed" Type="DateTime" Precision="0" />
     <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ImdbLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rating" Type="Int32" />
   </EntityType>
 </Schema>

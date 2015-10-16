@@ -19,6 +19,16 @@ namespace DATA.Repositories
             }
             return movieslist;
         }
+        public static List<Movy> SearchForMovies(string search)
+        {
+            var movieslist = new List<Movy>();
+            using (var database = new movieLibraryEntities())
+            {
+                movieslist = database.Movies.Where(x=>x.Title.StartsWith(search)).ToList();
+
+            }
+            return movieslist;
+        }
         public static Movy GetSpecificMovie(int id) 
         {
             using (var database = new movieLibraryEntities())
@@ -41,14 +51,15 @@ namespace DATA.Repositories
             using (var database = new movieLibraryEntities())
             {
                 var movieToUpdate = database.Movies.Where(x => x.Id == id).FirstOrDefault();
-                if (movieToUpdate != null) { 
-                movieToUpdate.Title = movie.Title;
-                movieToUpdate.description = movie.description;
-                movieToUpdate.Director = movie.Director;
-                movieToUpdate.ImdbLink = movie.ImdbLink;
-                movieToUpdate.viewed = movie.viewed;
-                
-                database.SaveChanges();
+                if (movieToUpdate != null)
+                {
+                    movieToUpdate.Title = movie.Title;
+                    movieToUpdate.description = movie.description;
+                    movieToUpdate.Director = movie.Director;
+                    movieToUpdate.ImdbLink = movie.ImdbLink;
+                    movieToUpdate.viewed = movie.viewed;
+                    movieToUpdate.Rating = movie.Rating;
+                    database.SaveChanges();
                 }
             }
         }

@@ -18,3 +18,7 @@ C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrar
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.xml
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\obj\Debug\DATA.pdb
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\PagedList.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\PagedList.Mvc.dll
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\PagedList.xml
+C:\Users\lodiz\Documents\Visual Studio 2013\Projects\movieSite\movie\MovieLibrarySite\DATA\bin\Debug\PagedList.Mvc.xml

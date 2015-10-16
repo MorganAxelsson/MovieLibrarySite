@@ -11,6 +11,7 @@
     <Property Name="viewed" Type="date" />
     <Property Name="description" Type="nvarchar" MaxLength="50" />
     <Property Name="ImdbLink" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rating" Type="int" />
   </EntityType>
   <EntityContainer Name="movieLibraryModelStoreContainer">
     <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />

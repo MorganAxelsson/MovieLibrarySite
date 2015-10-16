@@ -15,6 +15,12 @@
             @Html.DropDownListFor(x => x.Genre, Model.GenreList)
         </div>
         <div class="col-md-12">
+            @Html.LabelFor(x => x.Genre) @Html.ValidationMessageFor(x => x.Rating)
+        </div>
+        <div class="col-md-12">
+            @Html.DropDownListFor(x => x.Rating, Model.RatingList)
+        </div>
+        <div class="col-md-12">
             @Html.LabelFor(x => x.ImdbLink) @Html.ValidationMessageFor(x => x.ImdbLink)
         </div>
         <div class="col-md-12">

@@ -16,6 +16,7 @@
           <Property Name="viewed" Type="date" />
           <Property Name="description" Type="nvarchar" MaxLength="50" />
           <Property Name="ImdbLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="Rating" Type="int" />
         </EntityType>
         <EntityContainer Name="movieLibraryModelStoreContainer">
           <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
@@ -38,6 +39,7 @@
           <Property Name="viewed" Type="DateTime" Precision="0" />
           <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ImdbLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Rating" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -48,6 +50,7 @@
           <EntitySetMapping Name="Movies">
             <EntityTypeMapping TypeName="movieLibraryModel.Movy">
               <MappingFragment StoreEntitySet="Movies">
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
                 <ScalarProperty Name="ImdbLink" ColumnName="ImdbLink" />
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="viewed" ColumnName="viewed" />

@@ -21,11 +21,13 @@ namespace movieSite.Models
         public string Director { get; set; }        
         public string Description { get; set; }       
         public string ImdbLink { get; set; }
+        public int Rating { get; set; }
 
         [Required(ErrorMessage = "fill in date")] 
         public DateTime Viewed { get; set; }
         public List<Movy> MoviesList { get; set; }
         public List<SelectListItem> GenreList { get; set; }
+        public List<SelectListItem> RatingList { get; set; }
         #endregion
     }
 }

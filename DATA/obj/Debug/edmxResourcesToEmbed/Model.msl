@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Movies">
       <EntityTypeMapping TypeName="movieLibraryModel.Movy">
         <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
           <ScalarProperty Name="ImdbLink" ColumnName="ImdbLink" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="viewed" ColumnName="viewed" />

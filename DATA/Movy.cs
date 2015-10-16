@@ -21,5 +21,6 @@ namespace DATA
         public Nullable<System.DateTime> viewed { get; set; }
         public string description { get; set; }
         public string ImdbLink { get; set; }
+        public Nullable<int> Rating { get; set; }
     }
 }
