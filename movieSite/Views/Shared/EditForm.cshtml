@@ -44,7 +44,6 @@
         <div class="col-md-12">
             @Html.TextBoxFor(x => x.Viewed)
         </div>
-
         <div class="col-md-12">
             <input type="submit" value="Save" class="btn btn-primary" />
             <a class="btn btn-danger" href="@Url.Action("Remove","Movie",new {id=@Model.MovieID})">Ta bort<span class="glyphicon glyphicon-remove"></span></a>

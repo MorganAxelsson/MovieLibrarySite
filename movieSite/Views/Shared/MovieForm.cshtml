@@ -15,7 +15,7 @@
             @Html.DropDownListFor(x => x.Genre, Model.GenreList)
         </div>
         <div class="col-md-12">
-            @Html.LabelFor(x => x.Genre) @Html.ValidationMessageFor(x => x.Rating)
+            @Html.LabelFor(x => x.Rating) @Html.ValidationMessageFor(x => x.Rating)
         </div>
         <div class="col-md-12">
             @Html.DropDownListFor(x => x.Rating, Model.RatingList)
@@ -44,8 +44,6 @@
         <div class="col-md-12">
             @Html.TextBoxFor(x => x.Viewed)
         </div>
-
-
         <div class="col-md-12">
             <input type="submit" value="Add Movie" class="btn btn-primary" />
         </div>

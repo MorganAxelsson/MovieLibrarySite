@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using movieSite.Models;
 using DATA;
 using DATA.Repositories;
+using movieSite.Helpers;
 
 namespace movieSite.Controllers
 {
@@ -41,6 +42,7 @@ namespace movieSite.Controllers
         public ActionResult Remove(int id)
         {
             MovieRepository.RemoveMovie(id);
+            CacheHelper.RemoveCache("Movies");
             return RedirectToAction("Index", "Home");
         }
         #endregion
@@ -65,6 +67,9 @@ namespace movieSite.Controllers
             movie.Rating = model.Rating;
             movie.viewed = model.Viewed;
             MovieRepository.AddMovie(movie);
+
+            //clears the cache so the new movie will be in the lists
+            CacheHelper.RemoveCache("Movies");
             return RedirectToAction("Index","Home");
         }
         [HttpPost]
@@ -89,6 +94,9 @@ namespace movieSite.Controllers
             movie.viewed = model.Viewed;
             movie.Rating = model.Rating;
             MovieRepository.UpdateMovie(movie, Id);
+
+            //clears the cache so the movie will be updated in the list
+            CacheHelper.RemoveCache("Movies");
             return RedirectToAction("Index", "Home");
         }
         #endregion
