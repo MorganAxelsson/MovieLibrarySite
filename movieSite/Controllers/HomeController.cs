@@ -16,37 +16,44 @@ namespace movieSite.Controllers
         // GET: Home
         public ActionResult Index(string search,int? page,string sortby)
         {
+            //gets the list of movies in th cache if its empty it gets the movies and store it in cache then uses it.
             var moviesList = CacheHelper.Get<List<DATA.Movy>>("Movies");
             if (moviesList == null) 
             {
                 CacheHelper.Add("Movies",MovieRepository.GetMovies());
                 moviesList = CacheHelper.Get<List<DATA.Movy>>("Movies");
             }
-            //ViewBag.sortByName = string.IsNullOrEmpty(sortby) ? "Name desc" : "";
-            //ViewBag.sortByDate == "Date" ? "Date desc" : "Date";
 
-            
+            //This is for the sort function it stores which sort that should be used 
+           ViewBag.sortByName = string.IsNullOrEmpty(sortby) ? "Title desc" : "";
+           ViewBag.sortByDate = sortby == "Viewed" ? "Viewed desc" : "Viewed";
+
+           var movies = moviesList.OrderBy(x => x.viewed);
+
+            //this is the function for the search field
             if (search != null)
+            {                
+                movies = moviesList.Where(x => x.Title.StartsWith(search)).ToList().OrderBy(x => x.Title);                             
+            }
+
+            //The actual sorting, using the sortby var to know which sort to use
+            switch (sortby)
             {
-                
-                var movies = moviesList.Where(x => x.Title.StartsWith(search)).ToList().OrderBy(x => x.Title);
+                case "Title desc":
+                    movies = movies.OrderByDescending(x => x.Title);
+                    break;
+                case "Viewed desc":
+                    movies = movies.OrderByDescending(x => x.viewed);
+                    break;
+                case "Viewed":
+                    movies = movies.OrderBy(x => x.viewed);
+                    break;
+                default:
+                    movies = movies.OrderBy(x => x.Title);
+                    break; 
+             }
 
-                return View(movies.ToPagedList(page ?? 1, 10));
-            }
-            else
-            { 
-                 moviesList.OrderBy(x=>x.Title);
-                 return View(moviesList.ToPagedList(page ?? 1, 10));
-            }
-
-            //switch (sortby)
-            //{
-            //    case "Name desc":
-                    
-
-
-
-            //}
+            return View(movies.ToPagedList(page ?? 1, 10));
             
         }
         #endregion
