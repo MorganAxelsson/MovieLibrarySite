@@ -3,7 +3,14 @@
     ViewBag.Title = "Add";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@section datepicker
+{
+    <script>
+  $(function() {
+      $("#Viewed").datepicker();
+  });
+    </script>
+}
 <h2>Add a movie you have watched</h2>
 @Html.Partial("MovieForm")
 

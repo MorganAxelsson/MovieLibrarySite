@@ -16,7 +16,7 @@ namespace movieSite.Controllers
         // GET: Home
         public ActionResult Index(string search,int? page,string sortby)
         {
-            //gets the list of movies in th cache if its empty it gets the movies and store it in cache then uses it.
+            //gets the list of movies in the cache if its empty it gets the movies and store it in cache then uses it.
             var moviesList = CacheHelper.Get<List<DATA.Movy>>("Movies");
             if (moviesList == null) 
             {
@@ -24,7 +24,7 @@ namespace movieSite.Controllers
                 moviesList = CacheHelper.Get<List<DATA.Movy>>("Movies");
             }
 
-            //This is for the sort function it stores which sort that should be used 
+            //This is for the sort function, it stores which sort that should be used 
            ViewBag.sortByName = string.IsNullOrEmpty(sortby) ? "Title desc" : "";
            ViewBag.sortByDate = sortby == "Viewed" ? "Viewed desc" : "Viewed";
 
@@ -53,6 +53,7 @@ namespace movieSite.Controllers
                     break; 
              }
 
+            //returns the View with the movies in a pagedList 
             return View(movies.ToPagedList(page ?? 1, 10));
             
         }
